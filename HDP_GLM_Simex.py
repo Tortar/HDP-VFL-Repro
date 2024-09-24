@@ -77,8 +77,7 @@ class VerticalGLMs:
 			self.curr_params[b:c] /= max(1, np.sqrt(np.sum(self.curr_params[b:c]**2)))
 			self.params_history.append(self.curr_params.copy())
 
-		model_final = sm.GLM(self.data.y_train, self.data.X_train, family = self.family)
-		return model_final.predict(self.params_history[-1])
+		return self.curr_params
 
 	def passive_party_B_lp(self):
 		pm = self.partial_models[1]
