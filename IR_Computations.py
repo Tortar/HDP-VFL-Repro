@@ -1,7 +1,8 @@
 
 from math import log
 
-# logistic regression case
+# logistic regression case described in the paper
+
 lambda_ = 0.001
 b_teta = 0.25
 b_y = 1.1
